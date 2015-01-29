@@ -1,3 +1,3 @@
 # Java-Teamwork
-Team Libson
+Team Libson \n
 A Java - based game by Tihomira Kalchunkova, Stefan Gramadnikov, Pavel Shalev and Emilia Pavlova.
