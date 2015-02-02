@@ -1,5 +1,6 @@
 package com.edu4java.minitennis1;
 
+<<<<<<< HEAD
 import graphics.ImageLoader;
 
 import java.awt.*;
@@ -18,6 +19,19 @@ public class Enemy {
 
     private GameWindow game;
     //private BufferedImage img;
+=======
+import java.awt.Graphics2D;
+import java.awt.Rectangle;
+
+
+public class Enemy {
+    private static final int DIAMETER = 30;
+    int x = 0;
+    int y = 50;
+    int xa = 1;
+    int ya = 1;
+    private GameWindow game;
+>>>>>>> 82a471235842d3ddf38be8f98bc4a28e4d51d64c
 
     public Enemy(GameWindow game) {
         this.game = game;
@@ -31,6 +45,7 @@ public class Enemy {
         this.y = y;
     }
 
+<<<<<<< HEAD
     void moveBase(String direction) {
         switch (direction) {
             case "right":
@@ -98,6 +113,38 @@ public class Enemy {
 
         g2d.drawImage(image, this.x, this.y, 30, 30, null);
         //g.drawImage(img, transform, null);
+=======
+    void move() {
+        if (x + xa < 0)
+            xa = 1;
+        if (x + xa > game.getWidth() - DIAMETER)
+            xa = -1;
+        if (collision()){
+            game.gameOver();
+        }
+        x = x + xa;
+    }
+
+    void move1() {
+
+        if (x + xa < 0)
+            xa = 2;
+        if (x + xa > game.getWidth() - DIAMETER)
+            xa = -2;
+        if (collision()){
+            game.gameOver();
+        }
+        x = x + xa;
+    }
+
+
+    private boolean collision() {
+        return game.myPlayer.getBounds().intersects(getBounds());
+    }
+    public void paint(Graphics2D g) {
+        g.drawOval(x, y, DIAMETER, DIAMETER);
+        g.fillOval(x, y, DIAMETER, DIAMETER);
+>>>>>>> 82a471235842d3ddf38be8f98bc4a28e4d51d64c
     }
     public Rectangle getBounds() {
         return new Rectangle(x, y, DIAMETER, DIAMETER);

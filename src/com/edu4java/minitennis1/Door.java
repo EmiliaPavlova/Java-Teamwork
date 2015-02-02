@@ -1,8 +1,12 @@
 package com.edu4java.minitennis1;
 
+<<<<<<< HEAD
 import graphics.ImageLoader;
 import java.awt.*;
 import java.awt.image.BufferedImage;
+=======
+import java.awt.*;
+>>>>>>> 82a471235842d3ddf38be8f98bc4a28e4d51d64c
 
 public class Door {
 
@@ -10,7 +14,10 @@ public class Door {
     int height = 30;
     int x = 780;
     int y = 780;
+<<<<<<< HEAD
     boolean supposedToBeHere = false;
+=======
+>>>>>>> 82a471235842d3ddf38be8f98bc4a28e4d51d64c
 
     private GameWindow game;
 
@@ -18,6 +25,7 @@ public class Door {
         this.game = game;
     }
 
+<<<<<<< HEAD
     public void paint(String img, Graphics2D g2d){
         if(game.speed >= 20){
             supposedToBeHere = true;
@@ -28,6 +36,12 @@ public class Door {
                     RenderingHints.VALUE_ANTIALIAS_ON);
             g2d.drawImage(image, this.x - 30, this.y - 28, 50, 48, null);
         }
+=======
+    public void paint(Graphics2D g){
+        g.setColor(Color.BLUE);
+        g.drawRect(x, y, width, height);
+        g.fillRect(x, y, width,height);
+>>>>>>> 82a471235842d3ddf38be8f98bc4a28e4d51d64c
     }
 
     public Rectangle getDoorBounds() {

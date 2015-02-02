@@ -1,16 +1,26 @@
 package com.edu4java.minitennis1;
 
+<<<<<<< HEAD
 import graphics.ImageLoader;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
+=======
+import java.awt.*;
+import java.awt.event.KeyEvent;
+>>>>>>> 82a471235842d3ddf38be8f98bc4a28e4d51d64c
 
 public class Playa {
     private static final int DIAMETER = 30;
 
+<<<<<<< HEAD
     int x = 240;
     int y = 240;
+=======
+    int x = 350;
+    int y = 350;
+>>>>>>> 82a471235842d3ddf38be8f98bc4a28e4d51d64c
     int xa = 0;
     int ya = 0;
 
@@ -35,12 +45,20 @@ public class Playa {
              y = y + ya;
          }
 
+<<<<<<< HEAD
     public void paint(String img, Graphics2D g2d) {
         BufferedImage image = ImageLoader.loadImage(img);
         g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
                 RenderingHints.VALUE_ANTIALIAS_ON);
 
         g2d.drawImage(image, this.x, this.y, 40, 40, null);
+=======
+    public void paint(Graphics2D g) {
+        g.setColor(Color.GREEN);
+        g.drawOval(x, y, DIAMETER, DIAMETER);
+        g.fillOval(x, y, DIAMETER, DIAMETER);
+
+>>>>>>> 82a471235842d3ddf38be8f98bc4a28e4d51d64c
     }
 
     public void keyReleased(KeyEvent e) {
