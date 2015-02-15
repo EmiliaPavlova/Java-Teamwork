@@ -24,6 +24,7 @@ public class Enemy {
         this.y = y;
         this.game = game;
         this.image = ImageLoader.loadImage("/../img/bug.png");
+<<<<<<< HEAD
     }
 
     public Enemy(GameWindow game, int x, int y, BufferedImage img) {
@@ -31,6 +32,13 @@ public class Enemy {
         this.y = y;
         this.game = game;
         this.image = img;
+=======
+//        if (i < ENEMY_X_COORDINATES.length / 2) {
+//            this.image = ImageLoader.loadImage("/../img/bug.png");
+//        } else {
+//            this.image = ImageLoader.loadImage("/../img/bugRight.png");
+//        }
+>>>>>>> 0866ac23a48667a5dd85c3f9da35b6026aa8ffb5
     }
 
     void setX(int x) {

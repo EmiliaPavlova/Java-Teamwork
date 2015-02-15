@@ -33,6 +33,7 @@ public class GameWindow extends JPanel {
     public GameWindow(){
 
         for (int i = 0; i < ENEMY_X_COORDINATES.length; i++) {
+<<<<<<< HEAD
             if (i <= ENEMY_X_COORDINATES.length/2) {
                 enemies.add(new Enemy(this,ENEMY_X_COORDINATES[i],ENEMY_Y_COORDINATES[i], ImageLoader.loadImage("/../img/bugRight.png")));
             } else {
@@ -43,6 +44,10 @@ public class GameWindow extends JPanel {
 //        for (int i = ENEMY_X_COORDINATES.length / 2; i < ENEMY_X_COORDINATES.length; i++) {
 //            enemies.add(new Enemy(this,ENEMY_X_COORDINATES[i],ENEMY_Y_COORDINATES[i]));
 //        }
+=======
+            enemies.add(new Enemy(this,ENEMY_X_COORDINATES[i],ENEMY_Y_COORDINATES[i]));
+        }
+>>>>>>> 0866ac23a48667a5dd85c3f9da35b6026aa8ffb5
 
         for (int j = 0; j <FOOD_X_COORDINATES.length; j++) {
             food.add(new Food(this,FOOD_X_COORDINATES[j],FOOD_Y_COORDINATES[j]));
